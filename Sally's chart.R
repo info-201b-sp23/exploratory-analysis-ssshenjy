@@ -1,7 +1,7 @@
 library(ggplot2)
 library(dplyr)
 library(scales)
-
+library(tidyverse)
 
 state_vacc <- read.csv("us_state_vaccinations.csv", stringsAsFactors = FALSE)
 state_vacc$date <- as.Date(state_vacc$date)
