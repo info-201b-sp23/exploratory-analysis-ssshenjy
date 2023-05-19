@@ -179,7 +179,7 @@ calculated from your summary information R script
 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Summaryinformationscript.R")}
-
+cat(summary_information)
 ```
 
 
