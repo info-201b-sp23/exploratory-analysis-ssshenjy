@@ -67,10 +67,12 @@ There are several challenges and limitations that we might need to consider whil
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
 ### Table
+```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("'table.R")}
 
-Include a table of aggregate information
+```
 
-Describe why you included the table and what information it reveals
+This table offers an comprehensive review of relevant aggregated data of the U.S. as a whole regarding the COVID-19 vaccination status and statistics for its latest day of record. Information included in the table are average total doses administered which indicates the overall volume of vaccinations, average number of people fully vaccinated which provides an insight of the progress of vaccination coverage for full immunization, and average shared doses used which examinates the efficiency of vaccine distribution and utilization. This table provides a snapshot of the average statistics, grouping by all states of the United States on the latest available date, to monitor the progress of vaccination efforts and evaluate the effectiveness of vaccination campaigns. 
+
 
 ### Chart 1
 

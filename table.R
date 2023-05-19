@@ -14,3 +14,5 @@ aggregate_data <- state_vacc %>%
   summarize("Average Total Doses Administered " = mean(total_vaccinations, na.rm = TRUE), 
             "Average People Fully Vaccinated" = mean(people_fully_vaccinated, na.rm = TRUE),
             "Average Shared Doses Used" = mean(share_doses_used, na.rm = TRUE))
+
+print(aggregate_data)
