@@ -86,9 +86,9 @@ We can also see that New York's vaccination information is unavailable.
 
 ### Chart 2
 
-Include a chart
+```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Sidschart.R")}
 
-Describe why you chose this chart and what information it reveals
+```
 
 ### Chart 3
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Sally's chart.R")}
