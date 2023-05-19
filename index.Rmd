@@ -175,17 +175,14 @@ calculated from your summary information R script
 
 <<<<<<< HEAD
 
-```{r, warning = FALSE, code = readLines("Summaryinformationscript.R")}
-```
 
-
-```{r, warning = FALSE, code = readLines("Summaryinformationscript.R")}
-cat(summary_information)
-```
 
 
 ```{r, warning = FALSE, code = readLines("Summaryinformationscript.R")}
+
 ```
+
+
 
 ### Table
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("table.R")}
