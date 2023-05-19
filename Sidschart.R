@@ -18,3 +18,4 @@ bar_chart <- ggplot(top_states, aes(x = reorder(location, -ratio), y = ratio)) +
 
 # Display the bar chart
 print(bar_chart)
+# This chart displays the top 10 entities with the highest vaccination ratio. This means that these 10 places had the highest counts of vaccinations used in consideration to how many vaccinations were distributed.
