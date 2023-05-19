@@ -67,7 +67,7 @@ There are several challenges and limitations that we might need to consider whil
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
 ### Table
-```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("'table.R")}
+```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("table.R")}
 
 ```
 
