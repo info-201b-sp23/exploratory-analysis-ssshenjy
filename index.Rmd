@@ -178,7 +178,7 @@ calculated from your summary information R script
 
 
 
-```{r, warning = FALSE, code = readLines("Summaryinformationscript.R")}
+```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Summaryinformationscript.R")}
 
 ```
 
