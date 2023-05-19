@@ -79,7 +79,9 @@ This table offers an comprehensive review of relevant aggregated data of the U.S
 
 
 ### Chart 1
+```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Nick's Chart.R")}
 
+```
 
 The purpose of this map allows us to observe the proportion of people fully vaccinated by state. Those with colors closer to green shows a higher proportion of vaccinated people compared to those closer to red, lower proportion of vaccinated people. The usage of color makes this easier to see which states are safer and which states are not.
 
