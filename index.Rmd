@@ -5,50 +5,60 @@ output: html_document
 
 ## Project title
 
-Give your project a concise, interesting title that summarizes the entirety of your project
+Effectiveness of COVID-19 Vaccinations
 
 ### Authors
 
-Names of your team members
+Anushka Damidi, Candice Hu, Nick Ng, Sally Shen, Sid Thiagarajan
 
 ### Date
 
-Winter 2022
+Winter 2022, May 18th
 
 ### Abstract
 
-No more than three sentences that summarize your project. Focus on the very most important aspects. For example: (1) "Our main question is .... This question is important because .... To address the question, we will ...." (2) "We are concerned with ..., because .... To address this concern, we plan to ...." (3) "Consider that .... This is important because .... Accordingly, we plan to ...."
+This project will be focusing on finding and analyzing data sets regarding covid vaccinations. This project will specifically focus on vaccination percentages by specific areas and the accessibility to covid vaccination sites throughout the country. This information will result in a better understanding of covid vaccination sites, including their overall accessibility and how this might further impact the percentage of people that are willing to get vaccinated or refuse to get vaccinated.
 
 ### Keywords
 
-3-5 keywords that summarize your project.
-(e.g., "Keywords: human physiology; bicycle exercise; Gen Z; times-series data")
+- Vaccinations
+- Coronavirus
+- Locations
+- Accessibility
+- Funds
 
 ### Introduction  
 
-Briefly introduce your project.  Include 3-5 research questions. What motivates the questions? Why are they important? (at least 200 words)
+What steps need to be taken to ensure that covid vaccinations are readily available in communities that are against the covid vaccine? What is the most efficient way to spread information regarding covid? What areas have the least access to covid vaccinations? Should further incentives be provided to ensure that a large amount of the population gets vaccinated?
+
+While looking through information regarding Covid vaccinations, there was a drastic difference between blue (liberal) and red (republican) areas regarding vaccination percentages. Based on the data, there was a lower percentage of vaccinations among people in republican areas, with many people opting out of the vaccine and the subsequent booster shots. In addition, there was also a lower percentage of vaccinations among rural communities. Based on these findings, our project will be focusing on vaccinations and providing ways to spread awareness regarding vaccinations and an easier method to search for vaccination locations. Many people in rural areas and in republican states refuse to be vaccinated and even though some people do want to get vaccinated, there is a lack of access to vaccination sites. If correct information is provided along with easier ways to look for vaccination sites, a higher percentage of people will opt to receive vaccinations.
 
 ### Related Work  
 
-Describe your topic and related work in this space. You must include 3 citations to related work (URLs to similar work, high quality articles from the popular press, research papers, etc. ) Please use a standard citation style of your choice. (at least 200 words)
+[CARES Act: Higher Education Emergency Relief Fund](https://www2.ed.gov/about/offices/list/ope/caresact.html)
+
+[Covid-19 Vaccinations: County and State Tracker - The New York Times (nytimes.com)](https://www.nytimes.com/interactive/2020/us/covid-19-vaccine-doses.html)
+
+[Who Are the Adults Not Vaccinated Against COVID? (census.gov)](https://www.census.gov/library/stories/2021/12/who-are-the-adults-not-vaccinated-against-covid.html)
+
+
+Our dataset shows the amount of vaccinations throughout the pandemic and there are myriads of reasons that play a factor in this. During Covid-19, there were multiple policies that have been passed to relieve the economic state of the United states. One of them was the CARES act. The CARES act was a bill that provided $2.2 trillion to aid Americans that were impacted by the pandemic. Money was given through grants to insurance like Medicaid and more. These findings were also used to pay for vaccines too. From the New York Times article, we’re able to see that republicans are less likely to take covid vaccinations. In the percentage of residents vaccinated by state, it is displayed that the republicans and swing states have a smaller percentage than the democratic states. Besides grouping by state, we’re also able to see a county’s vulnerability to covid. In the article from the census, we learn that 42% of adults don’t trust the vaccine, 10% say it wasn’t recommended by doctors, and 2% have difficult access to it. Healthcare funding, political beliefs, and socialization all contribute to the amount of vaccines given and is related to our topic because our data shows the count of COVID-19 vaccinations and there are a plethora of reasons why people decide to take or not take the vaccine.
+
 
 ### The Dataset
 
-Where did you find the data? Please include a link to the data source  
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
+We chose the dataset “[us_state_vaccinations.cs](https://data.world/ourworldindata/covid-19-vaccinations/workspace/file?filename=us_state_vaccinations.csv)” that collected state-by-state data on United States COVID-19 vaccinations which was sourced from Our World in Data (OWID). OWID is a scientific online publication dedicated to addressing global issues such as poverty, disease, and inequality. The Our World in Data team collected and updated the vaccination data daily depending on the most recent data from the United States Centers for Disease Control and Prevention, and estimated the population data from the last revision of the United Nations World Population Prospects. The data was collected under the motivation of making the existing research and data accessible and understandable, providing a comprehensive perspective on global living conditions, and achieving more progress people are capable of. The dataset has 53,733 rows of observations and 16 columns including date, location, people_vaccinated, people_fully_vaccinated, and people_vaccinated_per_hundred, etc.. Some differences of the population between the number in the dataset and the ones reported by the government could be observed due to various differences in measures. The population in our dataset uses the total population in each state, while the official data reports the vaccination coverage as the percentage of eligible individuals who have been vaccinated, which typically refers only to adult population. In addition, clinical trials participants on the vaccine arm are excluded since such data is largely unavaliable especially for the ongoing trials.
 
 ### Implications
 
-Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (at least 150 words)
+If we answered the research questions, there are several possible implications for technologists, designers, and policymakers. 
+- Policymakers will have access to data that will enable them to make informed decisions about the distribution of vaccines. They will be able to create up-to-date public health guidelines and policies that reflect the effectiveness of vaccination in reducing the number of cases and deaths, which would be helpful on improving and mitigating the harm caused by the epidemic. The policymakers will also be able to identify areas where more effort is needed to improve vaccination coverage and make appropriate policy adjustments. 
+- Technologists will have the opportunity to predict trends related to the impact of the pandemic. They can also develop tools to disseminate the latest information on COVID-19 to the community, which can increase public awareness of the virus and its potential impact. 
+- Designers can play a role in designing real-time maps that track vaccination status updates using visualizations. These maps can help policymakers and the public to stay informed about vaccination progress and identify areas where more attention is needed, and determining the most effective way to make following improvements.
 
 ### Limitations & Challenges
-What challenges or limitations might you need to address with your project idea more broadly? Briefly discuss. (at least 150 words)
+
+There are several challenges and limitations that we might need to consider while developing our Shiny app on COVID vaccination data in the US. One of the most significant challenges that we may run into is data quality and reliability. The vaccination data can be complex, messy, and may not always be up-to-date, so it is important to have a reliable source of data to ensure the accuracy of our app's output. Additionally, the data may have different levels of precision depending on the source, which can impact how we visualize and analyze the data.  Another challenge is data privacy and security. As vaccination data is sensitive and sometimes protected information, we will need to ensure that we comply with data privacy regulations and protect user data when developing our app. Furthermore, developing a Shiny app requires some programming skills, and we need to make sure we have a good understanding of the R programming language to build a functional and interactive app. Finally, the success of our Shiny app may also depend on the availability of the data and the speed at which it is updated. We must ensure that our app can handle real-time data and provide timely insights to our users. 
 
 ### Summary Information
 
@@ -104,7 +114,20 @@ Include a chart
 Describe why you chose this chart and what information it reveals
 
 ### Chart 3
+```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Sally's chart.R")}
+plot("Sally's chart.R")
+```
 
-Include a chart
+The line chart above shows the total vaccinations or saying total number of COVID-19 doses administered in each year from 2021 to 2023 for California, New York State, Pennsylvania, Washington, and American Samoa.
 
-Describe why you chose this chart and what information it reveals
+I choose the line plot to visualize the total vaccination data for the five states - California, New York State, Pennsylvania, Washington, and American Samoa - because it effectively reveals the trend and changes in the number of vaccinations administered over the years. The line plot is clearly showing the difference on the number of total vaccinations each states administered and it's a great tool for comparing between the data. It also easily to see the trend of the vaccinations through the line plot, whether it is increasing in a higher rate or lower rate through years.
+
+Based on the plot, we can see California has the most total vaccinations of COVID in these five states and it's increasing in a high rate between year to year. Comparatively, the other four states are increasing at a lower rate than California. In these five states, we can see total vaccinations in American Samoa from the chart is almost stay in the value of 0, which is due to the number of total vaccinations here has a comparatively low number than the other states(e.g. total vaccination in California in 2021:816301
+, total vaccination in American Samoa in 2021: 2124). From the plot, all of the total vaccinations in five states are increasing at a higher rate between 2021 to 2022 than 2022 to 2023.
+
+The reason to choose these five states:
+-- California: State with the highest number of COVID-19 cases
+-- American Samoa: State with the lowest COVID-19 cases
+-- New York State: State with most death due to the COVID-19
+-- Pennsylvania: State with the highest death ratio of COVID-19
+-- Washington: State with the earliest COVID-19 case
