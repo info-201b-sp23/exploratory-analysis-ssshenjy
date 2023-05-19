@@ -171,16 +171,24 @@ insights to our users.
 Write a summary paragraph of findings that includes the 5 values
 calculated from your summary information R script
 
-```{r, warning = FALSE. code = readLines("Summaryinformationscript.R")}
+
+```{r, warning = FALSE, code = readLines("Summaryinformationscript.R")}
+```
+
+
+```{r, warning = FALSE, code = readLines("Summaryinformationscript.R")}
 cat(summary_information)
 ```
 
+
+```{r, warning = FALSE, code = readLines("Summaryinformationscript.R")}
+```
+
 ### Table
-```{r, echo = FALSE, message = FALSE, warning = FALSE, results = "asis", code = readLines("table.R")}
+```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("table.R")}
 
 #kable_html <- kable(aggregate_data, format = "html")
 #kable_html
-
 knitr::kable(aggregate_data, format = "html")
 ```
 
@@ -190,11 +198,6 @@ This table offers an comprehensive review of relevant aggregated data of the U.S
 ### Chart 1
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Nick's Chart.R")}
 
-<<<<<<< HEAD
-Include a chart
-
-Describe why you chose this chart and what information it reveals
-=======
 ```
 
 The purpose of this map allows us to observe the proportion of people fully vaccinated by state. Those with colors closer to green shows a higher proportion of vaccinated people compared to those closer to red, lower proportion of vaccinated people. The usage of color makes this easier to see which states are safer and which states are not.

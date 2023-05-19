@@ -17,3 +17,5 @@ summary_information <- paste("The average total vaccinations administered across
 
 # Print the summary paragraph
 cat(summary_information)
+
+
