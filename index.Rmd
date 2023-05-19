@@ -78,7 +78,7 @@ Describe why you chose this chart and what information it reveals
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+``````{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Nick's chart.R")}
 library(tidyverse)
 library(scales)
 state_vacc <- read.csv("us_state_vaccinations.csv", stringsAsFactors = FALSE)
@@ -89,10 +89,8 @@ latest_state_vacc <- state_vacc %>%
   filter(date == max(date))
 
 state_shape <- map_data("state")
-View(state_shape)
 combined_vacc_state <- left_join(state_shape, latest_state_vacc, by = c("region" = "location"))
 
-View(combined_vacc_state)
 ggplot(combined_vacc_state) + 
   geom_polygon(mapping = aes(x = long,
                              y = lat,
@@ -104,8 +102,13 @@ ggplot(combined_vacc_state) +
   labs(title = "Proportion of People Fully Vaccinated",
        fill = "Proportion")
   
-
 ````
+The purpose of this map allows us to observe the proportion of people fully vaccinated by state. Those with colors closer to green shows a higher proportion of vaccinated people compared to those closer to red, lower proportion of vaccinated people. The usage of color makes this easier to see which states are safer and which states are not.
+
+With this visual, we're able to see that Vermont has the higher population of vaccinated people while Wyoming and Alabama have the lowest proportion of vaccinated people.
+
+Another observation is that republican states tend to be vaccinated less than democratic states. Comparing this map to 2020 election map, we can see that those that leaned towards democrats tend to have a higher proportion of people fully vaccinated. 
+We can also see that New York's vaccination information is unavailable. 
 
 ### Chart 2
 
