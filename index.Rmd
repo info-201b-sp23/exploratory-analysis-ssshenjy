@@ -94,6 +94,7 @@ reasons why people decide to take or not take the vaccine.
 
 ### The Dataset
 
+<<<<<<< HEAD
 We chose the dataset
 "[us_state_vaccinations.cs](https://data.world/ourworldindata/covid-19-vaccinations/workspace/file?filename=us_state_vaccinations.csv)"
 that collected state-by-state data on United States COVID-19
@@ -118,6 +119,9 @@ eligible individuals who have been vaccinated, which typically refers
 only to adult population. In addition, clinical trials participants on
 the vaccine arm are excluded since such data is largely unavaliable
 especially for the ongoing trials.
+=======
+We chose the dataset “[us_state_vaccinations.csv](https://data.world/ourworldindata/covid-19-vaccinations/workspace/file?filename=us_state_vaccinations.csv)” that collected state-by-state data on United States COVID-19 vaccinations which was sourced from Our World in Data (OWID). OWID is a scientific online publication dedicated to addressing global issues such as poverty, disease, and inequality. The Our World in Data team collected and updated the vaccination data daily depending on the most recent data from the United States Centers for Disease Control and Prevention, and estimated the population data from the last revision of the United Nations World Population Prospects. The data was collected under the motivation of making the existing research and data accessible and understandable, providing a comprehensive perspective on global living conditions, and achieving more progress people are capable of. The dataset has 53,733 rows of observations and 16 columns including date, location, people_vaccinated, people_fully_vaccinated, and people_vaccinated_per_hundred, etc.. Some differences of the population between the number in the dataset and the ones reported by the government could be observed due to various differences in measures. The population in our dataset uses the total population in each state, while the official data reports the vaccination coverage as the percentage of eligible individuals who have been vaccinated, which typically refers only to adult population. In addition, clinical trials participants on the vaccine arm are excluded since such data is largely unavaliable especially for the ongoing trials.
+>>>>>>> 9c45810d118b02899aa10c2714c0925475fb3c4f
 
 ### Implications
 
@@ -172,16 +176,29 @@ cat(summary_information)
 ```
 
 ### Table
+```{r, echo = FALSE, message = FALSE, warning = FALSE, results = "asis", code = readLines("table.R")}
 
-Include a table of aggregate information
+#kable_html <- kable(aggregate_data, format = "html")
+#kable_html
 
-Describe why you included the table and what information it reveals
+knitr::kable(aggregate_data, format = "html")
+```
+
+This table offers an comprehensive review of relevant aggregated data of the U.S. as a whole regarding the COVID-19 vaccination status and statistics for its latest day of record. Information included in the table are average total doses administered which indicates the overall volume of vaccinations, average number of people fully vaccinated which provides an insight of the progress of vaccination coverage for full immunization, and average shared doses used which examinates the efficiency of vaccine distribution and utilization. This table provides a snapshot of the average statistics, grouping by all states of the United States on the latest available date, to monitor the progress of vaccination efforts and evaluate the effectiveness of vaccination campaigns. 
+
 
 ### Chart 1
+```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Nick's Chart.R")}
 
+<<<<<<< HEAD
 Include a chart
 
 Describe why you chose this chart and what information it reveals
+=======
+```
+
+The purpose of this map allows us to observe the proportion of people fully vaccinated by state. Those with colors closer to green shows a higher proportion of vaccinated people compared to those closer to red, lower proportion of vaccinated people. The usage of color makes this easier to see which states are safer and which states are not.
+>>>>>>> 9c45810d118b02899aa10c2714c0925475fb3c4f
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
@@ -189,9 +206,11 @@ Here's an example of how to run an R script inside an RMarkdown file:
 
 ### Chart 2
 
-Include a chart
+```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Sidschart.R")}
 
-Describe why you chose this chart and what information it reveals
+```
+
+This chart displays the top 10 entities with the highest vaccination ratio. This means that these 10 places had the highest counts of vaccinations used in consideration to how many vaccinations were distributed.
 
 ### Chart 3
 
