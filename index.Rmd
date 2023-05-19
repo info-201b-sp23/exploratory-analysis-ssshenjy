@@ -90,6 +90,8 @@ We can also see that New York's vaccination information is unavailable.
 
 ```
 
+This chart displays the top 10 entities with the highest vaccination ratio. This means that these 10 places had the highest counts of vaccinations used in consideration to how many vaccinations were distributed.
+
 ### Chart 3
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Sally's chart.R")}
 plot("Sally's chart.R")
