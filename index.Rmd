@@ -1,8 +1,10 @@
 ---
 title: "Exploratory Analysis"
-output: html_document
-editor_options: 
-  markdown: 
+output:
+  html_document: default
+  pdf_document: default
+editor_options:
+  markdown:
     wrap: 72
 ---
 
@@ -171,15 +173,15 @@ insights to our users.
 Write a summary paragraph of findings that includes the 5 values
 calculated from your summary information R script
 
-```{r, warning = FALSE, code = readLines("summaryinformationscript.R")}
+```{r, message = FALSE, warning = FALSE, code = readLines("summaryinformationscript.R")}
 cat(summary_information)
 ```
 
 ### Table
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("table.R")}
 
-#kable_html <- kable(aggregate_data, format = "html")
-#kable_html
+kable_html <- kable(aggregate_data, format = "html")
+kable_html
 knitr::kable(aggregate_data, format = "html")
 ```
 
@@ -192,11 +194,13 @@ This table offers an comprehensive review of relevant aggregated data of the U.S
 ```
 
 The purpose of this map allows us to observe the proportion of people fully vaccinated by state. Those with colors closer to green shows a higher proportion of vaccinated people compared to those closer to red, lower proportion of vaccinated people. The usage of color makes this easier to see which states are safer and which states are not.
->>>>>>> 9c45810d118b02899aa10c2714c0925475fb3c4f
+With this visual, we're able to see that Vermont has the higher population of vaccinated people while Wyoming and Alabama have the lowest proportion of vaccinated people.
+
+Another observation is that republican states tend to be vaccinated less than democratic states. Comparing this map to 2020 election map, we can see that those that leaned towards democrats tend to have a higher proportion of people fully vaccinated. 
+We can also see that New York's vaccination information is unavailable. 
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-\`\`\``{r, echo = FALSE, code = readLines("chart1_example.R")}`
 
 ### Chart 2
 
