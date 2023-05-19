@@ -1,6 +1,8 @@
 ---
 title: "Exploratory Analysis"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ## Project title
@@ -79,29 +81,6 @@ Describe why you chose this chart and what information it reveals
 Here's an example of how to run an R script inside an RMarkdown file:
 
 ``````{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("Nick's chart.R")}
-library(tidyverse)
-library(scales)
-state_vacc <- read.csv("us_state_vaccinations.csv", stringsAsFactors = FALSE)
-state_vacc$date <- as.Date(state_vacc$date)
-state_vacc$location <- tolower(state_vacc$location)
-latest_state_vacc <- state_vacc %>%
-  group_by(location) %>%
-  filter(date == max(date))
-
-state_shape <- map_data("state")
-combined_vacc_state <- left_join(state_shape, latest_state_vacc, by = c("region" = "location"))
-
-ggplot(combined_vacc_state) + 
-  geom_polygon(mapping = aes(x = long,
-                             y = lat,
-                             group = group,
-                             fill = people_fully_vaccinated_per_hundred/100)) +
-  scale_fill_continuous(low = 'red',
-                        high = 'green',
-                        labels = label_number_si()) + 
-  labs(title = "Proportion of People Fully Vaccinated",
-       fill = "Proportion")
-  
 ````
 The purpose of this map allows us to observe the proportion of people fully vaccinated by state. Those with colors closer to green shows a higher proportion of vaccinated people compared to those closer to red, lower proportion of vaccinated people. The usage of color makes this easier to see which states are safer and which states are not.
 
